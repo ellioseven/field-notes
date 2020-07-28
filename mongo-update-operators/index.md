@@ -1,8 +1,5 @@
 ---
 title: MongoDB Update Operators
-date: "2015-05-06T23:46:37.121Z"
-description: "Field notes on MongoDB update operators."
-draft: true
 ---
 
 - Can be used for all CRUD operations

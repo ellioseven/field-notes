@@ -1,8 +1,5 @@
 ---
 title: MongoDB Aggregation
-date: "2020-07-12T00:00:00.000Z"
-description: "Field notes on MongoDB aggregation."
-author: "Elliot Mitchum"
 ---
 Aggregation is essentially a pipeline of transformations. It works in stages
 to build a particular output. It accepts a list of objects "stage" with objects
