@@ -1,0 +1,27 @@
+---
+title: "Clean Code"
+---
+
+- LeBlanc's law: Later equals never
+- Boy scout rule: Leave it cleaner than when you found it
+- It's the programmers job to protect the code
+- Resist the temptation to take shortcuts that give the illusion of time savings and impede cleanliness
+- Cleaning code is applied with a series of behaviour preserving transformations
+- Elements of messy code
+  - Consistently being slowed down by systemic issues
+  - Refactor requests
+  - Simple changes become complex
+  - Tempts more messy code
+  - Tries to do too much
+  - No tests
+- Elements of clean code
+  - Readable
+  - Obvious and what you expect, unsurpising
+  - Small (routines, API, abstractions)
+  - Minimal
+  - Minimal dependencies
+  - Minimal duplication
+  - Care has been taken
+  - Contains only what is necessary
+  - Easy to adapt
+  - Single focused and unpolluted by the code around it
