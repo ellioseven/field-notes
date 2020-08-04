@@ -1,5 +1,6 @@
 ---
 title: MongoDB Update Operators
+published: true
 ---
 
 - Can be used for all CRUD operations

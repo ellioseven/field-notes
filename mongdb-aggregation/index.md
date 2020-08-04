@@ -1,5 +1,6 @@
 ---
 title: MongoDB Aggregation
+published: true
 ---
 Aggregation is essentially a pipeline of transformations. It works in stages
 to build a particular output. It accepts a list of objects "stage" with objects
