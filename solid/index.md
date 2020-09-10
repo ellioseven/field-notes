@@ -1,0 +1,13 @@
+---
+title: "SOLID Principles"
+---
+- How to arrange functions and data into logical groupings and how they should be connected
+- Goal: Create software that tolerates change, easy to understand, can be shared
+  - WARNING: Over-use of any principle can lead to over fragmentation, making it difficult to maintain. Know when and how to balance these principles
+- Single Responsibility Principle
+  - There should only be one reason for a component to change
+  - eg: A component that omits output should implement an output component instead of maintaining to output code itself
+- Open Closed Principle
+  - Open for extension, closed for modification. Changes should be applied by adding new code, instead of changing existing code
+  - eg: A quiz printer that outputs content depending on the quiz item type should be refactoring by accepting "QuizType" interfaces, which implements a print function, alleviating the switch case
+  - Switch-case statements can be signs of violation
