@@ -62,6 +62,7 @@ title: "SOLID Principles"
 
 - Low level modules usually provide utility functions
 - Example: An application needs to accept payments between a variety of providers, a "payment processor" abstraction can be consumed that implements providers such as Stripe, PayPal, etc. (where providers can be easily changed)
+- Stable abstraction over volatile concretion
 - Solutions
   - Adapter pattern
   - Polymorphism and dependency injection
