@@ -57,3 +57,16 @@ title: "Clean Architecture"
 - Exclusion principle
 - Don't depend on things you don't need
 - Similar to the "Interface Segregation Principle"
+
+## Component Coupling
+
+### Acyclic Dependencies
+
+- What: Allow no cycles in component dependency
+- Why: Acyclic dependencies make it difficult to isolate a component and may cause many unrelated components to become surprising coupled
+- When: Always
+
+#### Notes
+
+- Can be alleviated with dependency inversion
+- Can be alleviated with adapter pattern
