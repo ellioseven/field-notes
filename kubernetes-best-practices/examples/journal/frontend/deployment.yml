@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend
+  name: frontend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - name: passwd-volume
+          secret:
+            secretName: redis-passwd
+      containers:
+        - image: gcr.io/ellioseven-kbp/journal-server:1.0.2
+          imagePullPolicy: IfNotPresent
+          name: frontend
+          env:
+            - name: JOURNAL_ENTRIES
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config
+                  key: journalEntries
+          volumeMounts:
+            - name: passwd-volume
+              readOnly: true
+              mountPath: "/etc/redis-passwd"
+          # Setting Request equal to Limit will lead to the most predictable
+          # behavior of your application.
+          resources:
+            requests:
+              cpu: "0.25"
+              memory: "0.2G"
+            limits:
+              cpu: "0.25"
+              memory: "0.2G"

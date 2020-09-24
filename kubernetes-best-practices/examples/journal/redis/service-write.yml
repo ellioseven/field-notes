@@ -1,0 +1,13 @@
+# Headless service to provide DNS entry to redis master via `redis-0.redis`.
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: redis-write
+  name: redis-write
+spec:
+  clusterIP: None
+  ports:
+    - port: 6379
+  selector:
+    app: redis
