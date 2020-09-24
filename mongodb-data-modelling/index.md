@@ -40,6 +40,12 @@ published: false
 - Cardinality may effect choice to embed or link
   - Identify minimum, maximum and average relationship size
 
+## One to One
+
+- Look for logical groups in a document to create a one to one relationship
+- Prefer embed / subdocument over reference for simplicity
+- Use a reference for optimisation
+
 ## One to Many
 
 - Prefer embed over reference for simplicity, or when there is a small number of referenced documents
@@ -54,4 +60,11 @@ published: false
 
 ## Many to Many
 
--
+- Think carefully about a potential many to many relationship, from both sides, before you decide. Can it be simplified?
+  - Perhaps a relationship could be changed to one to one, or one to many, what are the effects? Is duplication prefered?
+  - Is the data static or dynamic?
+- Jump tables can be hard to refactor
+- Relationship can be represented with reference or embeds
+  - Prefer embeds if data will always be queried together, on the most queried document. Might be most beneficial if data is static
+  - Prefer references to avoid duplication
+    - Reference data can be populated with look ups or a separate query

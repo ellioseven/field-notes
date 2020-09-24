@@ -3,6 +3,7 @@ title: "Clean Architecture"
 ---
 
 - Goal: Minimise human resources to build and maintain the system
+- Good architecture makes the system easy to understand, easy to develop, easy to maintain, and easy to deploy
 - Measure: Effort required to meet customer needs
 - Signs of bad architecture:
   - Simple things are hard
@@ -20,8 +21,10 @@ title: "Clean Architecture"
 ## Cohesion
 
 - What classes belong to what components
-- Classes are the bricks, components are the rooms
-- Cohesion will change as focus shifts from developability to re-useability
+- Cohesion will be determined by re-usability, maintenance and deployment
+  - Re-usability: Classes within a component are often used together
+  - Maintenance: Classes within a component are often changed together
+  - Deployment: Classes within a component are often deployed together
 
 ### Reuse/Release Equivalence Principle
 
@@ -60,7 +63,11 @@ title: "Clean Architecture"
 
 ## Component Coupling
 
-### Acyclic Dependencies
+- Goal: Create stability between components
+  - Prevent frequent changes to a component to affect other stable components
+- These are aspects that become more and more apparent as the project lifecycle goes on
+
+### Acyclic Dependency Principle
 
 - What: Allow no cycles in component dependency
 - Why: Acyclic dependencies make it difficult to isolate a component and may cause many unrelated components to become surprising coupled
@@ -70,3 +77,24 @@ title: "Clean Architecture"
 
 - Can be alleviated with dependency inversion
 - Can be alleviated with adapter pattern
+
+### Stable Dependency Principle
+
+- What: Depend in the direction of stability
+  - Any component that is expected to change should not be depended on by a component that is difficult to change
+- Why: By having a stable component that relies on a flexible component, that flexible component becomes difficult to change (not flexible)
+- When: Always, particularly when a component has multiple dependants
+
+
+## What is Architecture
+
+- Separate details from business logic
+- Leave as many technical options open for as long as possible
+  - Maximise the number of decisions not made
+- Good architecture supports:
+  - Use case and operation of the system
+  - Maintenance of the system
+  - Development of the system
+  - Deployment of the system
+
+## Independence
