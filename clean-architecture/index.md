@@ -8,6 +8,14 @@ title: "Clean Architecture"
 - Signs of bad architecture:
   - Simple things are hard
   - Takes more and more time for "simple" tasks
+- Separate details from business logic
+- Leave as many technical options open for as long as possible
+  - Maximise the number of decisions not made
+- Good architecture supports:
+  - Use case and operation of the system
+  - Maintenance of the system
+  - Development of the system
+  - Deployment of the system
 - SDLC balances on behaviour and architecture, never focus on just behaviour as changes will become ever increasing complex and difficult
 - Behaviour is usually "Not important but urgent", architecture almost always proceeds behaviour as it's "Important and Urgent" or "Important not urgent"
   - It's up to the architect to ensure important tasks are prioritised first
@@ -85,16 +93,24 @@ title: "Clean Architecture"
 - Why: By having a stable component that relies on a flexible component, that flexible component becomes difficult to change (not flexible)
 - When: Always, particularly when a component has multiple dependants
 
+## Business Rules
 
-## What is Architecture
+- Business rules should be highly independent and highly re-usable, the heart and most elevated point of a system
+- Business rules comprise of "critical business rules" and "critical business data", which can be grouped into a single "entity".
+- An entity is not concerned with lower level details such as databases, UI, frameworks, etc. It can serve business into any system
+- Use case: How entities interact to perform application specific rules
+  - Doesn't describe lower details such as UI, database, etc. Providers an input and an output.
+  - Use cases should have zero or minimal dependencies, not even dependencies of related entities
+  - How data gets in an out is irrelevant
+  - eg: Gather contact information for a new loan
+    - Entities: "Customer", "Loan Estimate", "Denial"
+    - Input: Name, address, birthdate, etc.
+    - Output: Name, address, birthdate, etc. plus credit score
+    - Course:
+      1. Accept and validate loan
+      2. Validate details
+      3. Get credit score
+      4. If credit score < 500, activate "Denial"
+      5. Else, create "Customer", activate "Loan Estimation"
 
-- Separate details from business logic
-- Leave as many technical options open for as long as possible
-  - Maximise the number of decisions not made
-- Good architecture supports:
-  - Use case and operation of the system
-  - Maintenance of the system
-  - Development of the system
-  - Deployment of the system
-
-## Independence
+## Screaming Architecture
