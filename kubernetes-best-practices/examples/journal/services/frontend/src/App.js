@@ -6,7 +6,7 @@ function App() {
   const [value, setValue] = useState()
 
   const fetchValue = key => {
-    fetch(`http://localhost:8080/param/${key}`)
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/param/${key}`)
       .then(response => response.json())
       .then(response => setValue(response.value))
       .catch(error => console.log(error))
@@ -19,7 +19,7 @@ function App() {
     const value = e.target[1]?.value
     if (!key || !value) return
 
-    fetch(`http://localhost:8080/param/${key}`, {
+    fetch(`${process.env.REACT_APP_API_ENDPOINT}/param/${key}`, {
       method: "put",
       body: JSON.stringify({ value }),
       headers: {"Content-Type": "application/json"}
@@ -38,6 +38,7 @@ function App() {
         <input type="text" id="value" />
         <p><button>Submit</button></p>
       </form>
+      <hr />
       <p>Value: { value }</p>
     </div>
   )

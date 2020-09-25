@@ -11,6 +11,14 @@
 
 # Installation
 
+```
+docker-compose run --rm frontend yarn install
+docker-compose run --rm api yarn install
+docker-compose up
+```
+
+# Deployment
+
 ```sh
 # Prepare SDK.
 gcloud init
