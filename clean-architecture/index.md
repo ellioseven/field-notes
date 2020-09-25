@@ -114,3 +114,56 @@ title: "Clean Architecture"
       5. Else, create "Customer", activate "Loan Estimation"
 
 ## Screaming Architecture
+
+- Don't let frameworks take over the architecture
+- Business rules and use cases should be tested without frameworks
+
+## The Clean Architecture
+
+[Clean Architecture](clean-architecture.png)
+
+- Clean architecture allows details such as database or framework to be replaced without massive headaches
+- Architecture should be split into layers that separates abstraction, linked by the dependency rule
+- Architecture shouldn't depend on frameworks of libraries
+  - Architecture should be UI independent
+  - Architecture should be database independent
+- Business rules and use cases should be tested without details (ui, database, etc.)
+- Source code dependencies must point only inward, toward higher-level policies
+  - eg: Business rules don't import use cases, use cases don't import UI
+  - When passing data to an inner circle, it must be generic, without any implementation detail, such as SQL rows, etc.
+- Interface Adapters: Converts data from use cases and entities to a format compatible for details such as database or the UI
+  - Sits between low level details such as database and high level such as use cases and business logic
+  - Presenters, views and controllers all belong in interface adapters
+
+## Presenters & Humble Objects
+
+- Separate logic by testable and non-testable, allowing core logic to be elevated and tested
+  - Separate logic that is hard to test into a "humble object" and try to keep it small and simple, eg: UI
+  - Separate the rest into a "presenter" which can format data which is compatible for the presenter
+- A great approach for logic that is difficult to test, such as UI
+- Database Gateways: An abstraction/interface that links the database to the inner circle, it contains all the logic needed and passed into the higher levels such as use cases and business logic
+  - Inner circles (use cases, business logic, etc.) should not contain lower levels details such as SQL
+
+## Partial Boundaries
+
+- What: Implement a partial boundary, by using "Skip the Last Step", "Strategy" or "Facade"
+- Why:  Maintaining boundaries between architecture layers is a lot of work, and it may not be needed, but this may change in the future
+- When: You aren't sure if the value of maintaining strong architecture is needed or worth the cost
+
+### Notes
+
+- Approaches:
+  - Skip the Last Step: Do all the work to implement architecture layers, but keep them in the same component
+  - Strategy Pattern: @todo
+  - Facade Pattern: @todo
+- Reduces the cost of maintaining versions or release management
+- Can prevent fragmentation that is not needed
+
+## Layers and Boundaries
+
+- A layer or boundary is to create an abstraction between dependencies, they can be found in many areas between components
+- Developing and maintaining a layer or boundary is expensive
+- If boundaries are ignored, the cost is even greater
+- Know how to visualise when a boundary may or may not be needed, does this particular component need to change in the future? Is a partial or full implementation of abstraction needed or likely to be needed?
+
+## The Main Component
