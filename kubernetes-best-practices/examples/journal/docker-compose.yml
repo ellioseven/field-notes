@@ -1,0 +1,41 @@
+version: "2.2"
+services:
+  frontend:
+    image: node:12-alpine
+    working_dir: "/srv"
+    stdin_open: true
+    depends_on:
+      - api
+    environment:
+      PATH: /srv/node_modules/.bin:$PATH
+    command: ["yarn", "start"]
+    ports:
+      - 80:80
+    volumes:
+      - ./services/frontend:/srv
+      - ./.docker/frontend/.cache:/home/node/.cache
+  api:
+    image: node:12-alpine
+    working_dir: "/srv"
+    stdin_open: true
+    environment:
+      PATH: /srv/node_modules/.bin:$PATH
+      REDIS_HOST: redis
+      API_PORT: 8080
+    command: ["yarn", "start:dev"]
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    volumes:
+      - ./services/api:/srv
+  redis:
+    image: redis:5-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 2m
+      retries: 5
+    ports:
+      - 6379:6379
