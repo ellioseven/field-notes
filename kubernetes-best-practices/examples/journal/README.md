@@ -41,8 +41,13 @@ gcloud container clusters get-credentials <cluster-name>
 ## Redis
 
 ```sh
+cd redis
+
 kubectl create configmap redis-config \
   --from-file=launch.sh=launch.sh
+
+kubectl create secret generic redis-passwd \
+  --from-literal=passwd=1234
 ```
 
 ## Frontend
@@ -52,9 +57,6 @@ kubectl create configmap redis-config \
 ```sh
 kubectl create configmap frontend-config \
   --from-literal=journalEntries=10
-
-kubectl create secret generic redis-passwd \
-  --from-literal=passwd=${random}
 ```
 
 ### Build Image

@@ -21,6 +21,8 @@ spec:
           imagePullPolicy: Always
           terminationMessagePath: /dev/terminatation-log
           terminationMessagePolicy: File
+          ports:
+            - containerPort: 80
           resources:
             requests:
               cpu: "0.25"

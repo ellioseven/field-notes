@@ -22,7 +22,7 @@ spec:
           secret:
             secretName: redis-passwd
       containers:
-        - image: gcr.io/ellioseven-kbp/journal-server:1.0.2
+        - image: gcr.io/ellioseven-kbp/journal-server:1.0.5
           imagePullPolicy: IfNotPresent
           name: frontend
           env:

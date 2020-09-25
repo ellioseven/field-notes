@@ -11,4 +11,4 @@ gcloud beta container \
     --image-type "COS" \
     --disk-type "pd-standard" \
     --disk-size "30" \
-    --num-nodes "1"
+    --num-nodes "3"
