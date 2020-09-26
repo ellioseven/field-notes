@@ -1,5 +1,6 @@
 # Requirements
 
+- kubectl
 - gcloud
 - GCP Billing Account
 
@@ -21,8 +22,8 @@ docker-compose up
 
 ```sh
 # Prepare SDK.
+# Ensure project and default zone are set.
 gcloud init
-gcloud config set compute/zone <zone> # us-central1-a
 
 # Link billing account.
 gcloud beta billing projects link <project> \
@@ -46,32 +47,24 @@ gcloud container clusters get-credentials <cluster-name>
 
 # Usage
 
-## Redis
-
-```sh
-cd redis
-
-kubectl create configmap redis-config \
-  --from-file=launch.sh=launch.sh
-
-kubectl create secret generic redis-passwd \
-  --from-literal=passwd=1234
-```
-
 ## Frontend
-
-### Set Configuration
-
-```sh
-kubectl create configmap frontend-config \
-  --from-literal=journalEntries=10
-```
 
 ### Build Image
 
 ```sh
 # https://cloud.google.com/cloud-build/docs/building/build-containers
-gcloud builds submit ./frontend \
+gcloud builds submit ./services/frontend \
+  --tag gcr.io/<project>/<image>
+```
+
+## API
+
+```
+### Build Image
+
+```sh
+# https://cloud.google.com/cloud-build/docs/building/build-containers
+gcloud builds submit ./api \
   --tag gcr.io/<project>/<image>
 ```
 

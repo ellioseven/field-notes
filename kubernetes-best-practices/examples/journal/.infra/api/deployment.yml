@@ -1,40 +1,31 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: frontend
-  name: frontend
+    app: api
+  name: api
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: api
   template:
     metadata:
       labels:
-        app: frontend
+        app: api
     spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
-      volumes:
-        - name: passwd-volume
-          secret:
-            secretName: redis-passwd
       containers:
-        - image: gcr.io/ellioseven-kbp/journal-server:1.0.5
+        - image: gcr.io/ellioseven-kbp/journal-api:1.0.22
+          command:
+            - yarn
+            - start
           imagePullPolicy: IfNotPresent
-          name: frontend
-          env:
-            - name: JOURNAL_ENTRIES
-              valueFrom:
-                configMapKeyRef:
-                  name: frontend-config
-                  key: journalEntries
-          volumeMounts:
-            - name: passwd-volume
-              readOnly: true
-              mountPath: "/etc/redis-passwd"
+          ports:
+            - containerPort: 4000
+          name: api
           # Setting Request equal to Limit will lead to the most predictable
           # behavior of your application.
           resources:

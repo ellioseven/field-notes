@@ -1,0 +1,5 @@
+FROM node:12-alpine
+WORKDIR /srv
+ENV PATH /srv/node_modules/.bin:$PATH
+ENV REACT_APP_API_ENDPOINT http://api.journal.example:3000
+USER node

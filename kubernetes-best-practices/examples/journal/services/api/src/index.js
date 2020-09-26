@@ -21,6 +21,12 @@ const _error = ({ res, error }) => {
   res.end(error)
 }
 
+// All Kubernetes services must serve a 200 page on '/'.
+// @url https://github.com/kubernetes/kubernetes/issues/20555
+app.get("/", (req, res) => {
+  return res.json({ status: "OK" })
+})
+
 app.get("/param/:key", (req, res) => {
   const { key } = req.params
   storage.get(key, (error, value) => {
@@ -38,5 +44,4 @@ app.put("/param/:key", (req, res) => {
   })
 })
 
-const port = process.env.API_PORT || 8080
-app.listen(port, () => console.log("Listening on " + port))
+app.listen(4000, () => console.log("Listening"))

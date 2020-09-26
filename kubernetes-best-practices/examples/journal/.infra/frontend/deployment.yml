@@ -2,27 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: files
-  name: files
+    app: frontend
+  name: frontend
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: files
+      app: frontend
   template:
     metadata:
       labels:
-        app: files
+        app: frontend
     spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
       containers:
-        - name: files
-          image: nginx:alpine
-          imagePullPolicy: Always
-          terminationMessagePath: /dev/terminatation-log
-          terminationMessagePolicy: File
+        - name: frontend
+          image: gcr.io/ellioseven-kbp/journal-frontend:1.0.8
+          imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             requests:
               cpu: "0.25"
@@ -30,5 +30,3 @@ spec:
             limits:
               cpu: "0.25"
               memory: "0.2G"
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always

@@ -1,34 +1,25 @@
 version: "2.2"
 services:
   frontend:
-    image: node:12-alpine
-    working_dir: "/srv"
+    build: ./services/frontend/dockerfile.dev
     stdin_open: true
     depends_on:
       - api
-    environment:
-      PATH: /srv/node_modules/.bin:$PATH
-      REACT_APP_API_ENDPOINT: "http://localhost:8080"
     command: ["yarn", "start"]
     ports:
-      - 80:80
+      - 3000:3000
     volumes:
       - ./services/frontend:/srv
       - ./.docker/frontend/.cache:/home/node/.cache
   api:
-    image: node:12-alpine
-    working_dir: "/srv"
+    build: ./services/api/dockerfile.dev
     stdin_open: true
-    environment:
-      PATH: /srv/node_modules/.bin:$PATH
-      REDIS_HOST: redis
-      API_PORT: 8080
     command: ["yarn", "start:dev"]
     depends_on:
       redis:
         condition: service_healthy
     ports:
-      - 8080:8080
+      - 3000:3000
     volumes:
       - ./services/api:/srv
   redis:

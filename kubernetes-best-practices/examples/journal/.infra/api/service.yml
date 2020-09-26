@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: frontend
-  name: frontend
+    app: api
+  name: api
   namespace: default
 spec:
   ports:
-    - port: 8080
+    - port: 4000
       protocol: TCP
-      targetPort: 8080
+      targetPort: 4000
   selector:
-    app: frontend
+    app: api
   type: NodePort
