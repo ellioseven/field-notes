@@ -43,31 +43,49 @@ gcloud container clusters get-credentials <cluster-name>
 
 # Destroy Kubernetes cluster.
 ./scripts/destroy.sh <cluster-name>
+
+# Deploy services.
+kubectl apply -f ./.infra/
+kubectl apply -f ./.infra/redis
+kubectl apply -f ./.infra/api
+kubectl apply -f ./.infra/frontend
 ```
 
 # Usage
 
 ## Frontend
 
-### Build Image
-
 ```sh
 # https://cloud.google.com/cloud-build/docs/building/build-containers
 gcloud builds submit ./services/frontend \
   --tag gcr.io/<project>/<image>
+
+# Create config.
+kubectl create configmap \
+  frontend-config \
+  --from-literal=apiEndpoint=http://api.journal.example
 ```
 
 ## API
 
-```
-### Build Image
-
 ```sh
+# Build image.
 # https://cloud.google.com/cloud-build/docs/building/build-containers
 gcloud builds submit ./api \
   --tag gcr.io/<project>/<image>
+
+# Create config.
+kubectl create configmap \
+  api-config \
+  --from-literal=apiPort=4000 \
+  --from-literal=redisHost=redis
 ```
 
 ## Resources
 
 - [Frontend Sample](https://github.com/brendandburns/kbp-sample/blob/master/server.js)
+
+# Notes
+
+- Domains `api.journal.example` and `journal.example` need to be added to your
+  `/etc/hosts` files, where the IP is the ingress external IP.

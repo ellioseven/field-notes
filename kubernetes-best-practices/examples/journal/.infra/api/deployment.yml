@@ -18,11 +18,22 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       containers:
-        - image: gcr.io/ellioseven-kbp/journal-api:1.0.22
+        - image: gcr.io/aqueous-timer-291305/journal-api:1.0.1
           command:
             - yarn
             - start
           imagePullPolicy: IfNotPresent
+          env:
+            - name: API_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: api-config
+                  key: apiPort
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: api-config
+                  key: redisHost
           ports:
             - containerPort: 4000
           name: api

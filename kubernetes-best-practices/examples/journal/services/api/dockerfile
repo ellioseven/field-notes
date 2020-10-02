@@ -1,7 +1,5 @@
 FROM node:12-alpine
 ENV PATH /srv/node_modules/.bin:$PATH
-ENV API_PORT 4000
-ENV REDIS_HOST redis
 COPY . /srv
 WORKDIR /srv
 ENV PATH /srv/node_modules/.bin:$PATH

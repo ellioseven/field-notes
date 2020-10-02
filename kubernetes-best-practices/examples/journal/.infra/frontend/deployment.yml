@@ -19,8 +19,14 @@ spec:
       restartPolicy: Always
       containers:
         - name: frontend
-          image: gcr.io/ellioseven-kbp/journal-frontend:1.0.8
+          image: gcr.io/aqueous-timer-291305/journal-frontend:1.0.1
           imagePullPolicy: IfNotPresent
+          env:
+            - name: REACT_APP_API_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config
+                  key: apiEndpoint
           ports:
             - containerPort: 3000
           resources:
