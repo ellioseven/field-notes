@@ -166,4 +166,15 @@ title: "Clean Architecture"
 - If boundaries are ignored, the cost is even greater
 - Know how to visualise when a boundary may or may not be needed, does this particular component need to change in the future? Is a partial or full implementation of abstraction needed or likely to be needed?
 
-## The Main Component
+## Test Boundary
+
+- __Separate application structure from test structure__
+- Fragile Test Problem: Changes to common system components can cause too many tests break
+  - If a simple change breaks way too many tests, something has gone wrong
+  - Tests need to be maintainable
+- __Don't depend on volatile things__
+  - Business rules need to be tested without a GUI
+- Tests should have super powers:
+  - Bypass expensive resources (eg: database)
+  - Avoid security constraints
+  - __Force the system into testable states__
