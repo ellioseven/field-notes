@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: {{ template "journal.fullname" . }}-frontend
+  name: {{ template "journal.fullname" . }}-frontend
+  namespace: default
+spec:
+  ports:
+    - port: {{ .Values.frontend.port }}
+      protocol: TCP
+      targetPort: {{ .Values.frontend.port }}
+  selector:
+    app: {{ template "journal.fullname" . }}-frontend
+  sessionAffinity: None
+  type: NodePort
