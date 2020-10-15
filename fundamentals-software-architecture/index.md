@@ -74,3 +74,5 @@ title: "Fundamentals of Software Architecture"
     - Usability: Level of training required to work with the system
 - Architecture characteristics require a balance, improving one (eg: security) will effect another (eg: performance), leading to trade-offs
 - Never shoot for the best architecture, but rather the least worst architecture
+
+# Identifying Architectural Characteristics
