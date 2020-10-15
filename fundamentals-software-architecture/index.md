@@ -38,3 +38,39 @@ title: "Fundamentals of Software Architecture"
 # Modularity
 
 - Huh?
+
+# Architecture Characteristics
+
+- Architecture Characteristic: Implications of business requirement design
+- An architecture characteristic meets three criteria:
+  - Specifies a nondomain design consideration: Describes HOW a requirement is implemented and WHY choices were made (explicit)
+  - Influences some structural aspect of the design: Concern of a requirement (eg: security) needs special structural design (eg: isolation by a separate module, service, etc.) (implicit)
+  - Is critical or important to application success: Only a handful of characteristics can be successfully elevated, otherwise architecture becomes extremely complex and fails
+- Split between implicit and explicit:
+  - Implicit: Must be "discovered" during requirement analysis
+  - Explicit: Are defined in requirements
+- Characteristic categorisation:
+  - Operational:
+    - Availability: How long the system will need to be available
+    - Continuity: Disaster recovery capability.
+    - Performance:
+    - Recoverability: How long or difficult will a recovery be after a disaster
+    - Reliability: How resilient is the application? Does it need to be fail-safe? What is the impact of a failure?
+    - Scalability: Ability to respond to request frequency
+  - Structural:
+    - Configurability: Ability for users to change configuration
+    - Extensibility: How important new "pieces" need to be "plugged in"
+    - Installability: How easy installation is on all platforms
+    - Leverageability: How easy re-use is among multiple products
+    - Maintainability: How easy changes can be applied to a system
+    - Portability: Does the application need to run on different platforms?
+    - Supportability: What level of technical support (logging, debugging, etc.) is required
+    - Upgradeability: How easy a transition is to/from a next/previous version for clients and servers
+  - Cross-cutting:
+    - Accessibility: Can the application be accessed by all users (disability)
+    - Archivability: Will the data need to be archived or deleted after a period of time?
+    - Authentication: Are the users who they say they are?
+    - Authorisation: Can the user access this certain function?
+    - Usability: Level of training required to work with the system
+- Architecture characteristics require a balance, improving one (eg: security) will effect another (eg: performance), leading to trade-offs
+- Never shoot for the best architecture, but rather the least worst architecture
