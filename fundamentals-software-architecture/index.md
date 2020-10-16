@@ -76,3 +76,35 @@ title: "Fundamentals of Software Architecture"
 - Never shoot for the best architecture, but rather the least worst architecture
 
 # Identifying Architectural Characteristics
+
+- Identifying dominate architectural characteristics is the first step to creating a new architecture or validating an existing one
+  - Discover what is truely important from a business domain standpoint
+- Discovered from domain concerns, requirements and domain knowledge
+  - Understand key domain goals and situation to develop the most important characteristics
+- Domain stakeholders and architects speak a different language, a translation is often required:
+  - Mergers and acquisitions: Interoperability, scalability, adaptability, extensibility
+  - Time to market: Agility, testability, deployability
+  - User satisfaction: Performance, availability, fault tolerance, testability, deployability, agility, security
+  - Competitive advantage: Agility, testability, deployability, scalability, availability, fault tolerance
+  - Time and budget: Simplicity, feasibility
+- A domain concern often translates to multiple characteristics, don't fall into the trap of neglecting other important characteristics (eg: time to market includes agility, but also testing and deployability)
+- Look for characteristics that come from explicit requirements, such as expected number of users and scaling requirements
+- Domain knowledge can help discover implicit characteristics, eg: A class registration system needs to be designed, will students register evenly over the deadline or register last minute? How does that effect characteristics like scalability
+- Steps:
+  1. Consider each requirement carefully, separate __explicit__ characteristics
+  2. Consider each requirement carefully, separate __implicit__ characteristics
+
+## Example
+
+- Sandwich shop, makes and delivers food online
+  - Requirements:
+    - Currently handles thousands of users
+    - Potentially millions of users in the future
+    - Use a mapping service for pick up directions
+    - Provide a strong mobile experience
+  - Explicit requirements:
+    - Scalability: Being able to scale from thousands of users to milllions of users
+  - Implicit requirements:
+    - Elasticity: Orders will be made primarly around meal times, being able to respond to high/low volumes in bursts
+    - Reliability: What happens if the mapping service goes down?
+    - Performance: Must be responsive for mobile users
