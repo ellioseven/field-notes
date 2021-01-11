@@ -108,3 +108,5 @@ title: "Fundamentals of Software Architecture"
     - Elasticity: Orders will be made primarly around meal times, being able to respond to high/low volumes in bursts
     - Reliability: What happens if the mapping service goes down?
     - Performance: Must be responsive for mobile users
+
+## Measuring & Governing Architecture Characteristics

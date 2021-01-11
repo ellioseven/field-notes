@@ -4,4 +4,4 @@ metadata:
   name: {{ template "journal.fullname" . }}-api-config
 data:
   apiPort: "{{ .Values.api.port }}"
-  redisHost: "{{ .Values.redis.host }}"
+  redisHost: "{{ template "journal.fullname" . }}-redis"

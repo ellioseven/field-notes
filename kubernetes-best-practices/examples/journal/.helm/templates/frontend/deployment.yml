@@ -21,6 +21,11 @@ spec:
         - name: {{ template "journal.fullname" . }}-frontend
           image: "gcr.io/aqueous-timer-291305/journal-frontend:{{ .Chart.AppVersion }}"
           imagePullPolicy: IfNotPresent
+          stdin: true
+          tty: true
+          command:
+            - yarn
+            - start
           env:
             - name: REACT_APP_API_ENDPOINT
               valueFrom:

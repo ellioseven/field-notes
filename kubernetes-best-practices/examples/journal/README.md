@@ -2,6 +2,7 @@
 
 - kubectl
 - gcloud
+- helm
 - GCP Billing Account
 
 ## Getting a Billing Account ID
@@ -45,10 +46,16 @@ gcloud container clusters get-credentials <cluster-name>
 ./scripts/destroy.sh <cluster-name>
 
 # Deploy services.
-kubectl apply -f ./.infra/
-kubectl apply -f ./.infra/redis
-kubectl apply -f ./.infra/api
-kubectl apply -f ./.infra/frontend
+# NOTE: Ensure builds have been submitted and that versions match `appVersion`
+# in .helm/values.yaml
+cd .helm
+helm install -f values.yaml . --generate-name
+
+# List deployed applications.
+helm list
+
+# Uninstall deployed application.
+helm uninstall <release-name>
 ```
 
 # Usage
@@ -59,11 +66,6 @@ kubectl apply -f ./.infra/frontend
 # https://cloud.google.com/cloud-build/docs/building/build-containers
 gcloud builds submit ./services/frontend \
   --tag gcr.io/<project>/<image>
-
-# Create config.
-kubectl create configmap \
-  frontend-config \
-  --from-literal=apiEndpoint=http://api.journal.example
 ```
 
 ## API
@@ -73,12 +75,6 @@ kubectl create configmap \
 # https://cloud.google.com/cloud-build/docs/building/build-containers
 gcloud builds submit ./api \
   --tag gcr.io/<project>/<image>
-
-# Create config.
-kubectl create configmap \
-  api-config \
-  --from-literal=apiPort=4000 \
-  --from-literal=redisHost=redis
 ```
 
 ## Resources

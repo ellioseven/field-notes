@@ -1,5 +1,4 @@
 FROM node:12-alpine
-ENV PATH /srv/node_modules/.bin:$PATH
 COPY . /srv
 WORKDIR /srv
 ENV PATH /srv/node_modules/.bin:$PATH
