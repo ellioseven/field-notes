@@ -121,3 +121,10 @@
 
 -
 
+## Resources
+
+- [Coding Interview University](https://github.com/jwasham/coding-interview-university)
+- [Frontend Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)
+- [Frontend Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+- [Backend Interview Questions](https://github.com/starandtina/backend-interview-questions)
+
