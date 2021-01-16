@@ -1,0 +1,70 @@
+# How to Land Your Dream Job
+
+From the [Art of Manliness podcast](https://www.artofmanliness.com/articles/how-to-land-your-dream-job/)
+
+- Career seasons:
+  - Growth: Better salary, more challenging work, wanting to learn, don't mind spending extra time
+  - Lifestyle: Work enough to support your lifestyle (parents, travel, etc.)
+  - Reinvent: A complete switch in career
+- You can only choose __one__ career season
+- Each career season needs a certain set of skills
+  - Growth: Research the company, do employees grow? Look at LinkedIn profiles
+  - Lifestyle: Does the company require a huge amount of commitment?
+  - Reinvent:
+- Develop a curated selection of companies (5 - 10)
+  - "I want to work for a [industry] company, based in [location], between [x - y] amount of employees, and I want my job title to be [job-title]"
+  - Specificity helps build networks and targeted CVs and cover letters
+- Develop a skill to learn what's important to you
+  - How does the selection of companies align with your values
+  - Interview the company, not just the other way round
+- You don't have to go through the same proecss every time, the same job titles, the same method of updating your resume and submitting it to job sites
+  - Know what career season you're in, know the implications
+  - Look at dream companies
+  - Find your dream role
+- Application tips:
+  - Reach out to your network and ask employees:
+    - "This is what I do"
+    - "This is why I want to change"
+    - "What do you like about your job"
+    - "What is working at the company like"
+- Resume tips
+  - Target the resume and the cover letter to the company
+  - Narivite test: Look at the resume for 10 seconds, and ask yourself who that person is, in one sentence
+    - What is the 10 second naritive of your resume?
+    - Remove the jargon, and outline the key outcomes you drove
+      - Delete "Proficient in MS Word", no one cares
+      - Every word needs to earn intself on the page
+      - "How you coordinanted and collaborated with 3 other team members to improve conversion by 300% in 12 months"
+      - Take out anything that doesn't support your naritive
+    - Chronology is not that imporant
+    - Examples:
+      - "The technology and physcology guy, who really knows marketing"
+      - "The performance marketer who can drive 10,000 profitable leads a month"
+      - "The organisational leader who has managed turnarounds over and over again"
+- Cover letters:
+  - Your cover letter will only be read if the resume has made an impression in 10 seconds
+  - Tell people about key highlights in your resume
+  - Don't repeat, expand
+  - Tell them who you have spoken to, who works/worked there 
+    - Why they got you excited
+  - Tell them why you are excited for the role
+  - Why you are looking to change now
+  - What you can contribute
+  - How does this role relate to your career season?
+    - Growth: Tell them you are eager for growth
+- Interview tips:
+  - Know key messages in your naritive:
+    - Practice ahead of time
+    - Make sure it's concise
+    - "Why do you want to work here" / "Tell me about yourself"
+      - Relate it to your naritive / story
+        - "I'm very interested in x, y, z"
+        - "I've used my interested to drive measurable results"
+          - Describe a problem/solution/outcome/reflection that relates to the interest
+          - Relate it to the role: "That's why I'm exicted to work here, because I can... and contribute what I've experienced previously"
+  - __Always have questions at the end of the interview__
+    - Ask meaning questions that show your curious about the company
+    - Have these questions ready well before the interview
+    - Ask questions about how the company can build on your career season
+      - "One of the things that interested me about Acme is the potential for growth, at my last company people tended to stay in the same position for years, I'm looking for opportunity to learn and for promotion. Can you tell me how Acme trains and develops it's employees"
+
