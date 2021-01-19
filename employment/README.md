@@ -152,7 +152,7 @@
 
 ### Qualities:
 
-- Self motivated
+- Proactive and self motivated
 - Focus on growth and continuous improvement
 - Technical communication skills
 - Problem solving skills
