@@ -168,7 +168,7 @@
 - Create large-scale distributed systems with API's and microservices
 - Being able to explore and analyse technology to solve client problems
 - DevOps tools and practices to build and deploy software
-- Experience in TypeScript, JavaScript, React
+- Experience in TypeScript, JavaScript, React, Node.js, GraphQL, MongoDB, Postgres, Kubernetes, Docker
 - Cloud technology such as AWS, Kubernetes and Docker
 - Ability to write high quality, well tested code
 - Ability to maintain, improve and develop existing software and processes
