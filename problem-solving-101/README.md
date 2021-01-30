@@ -24,7 +24,18 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
   - How: Develop an effective plan
   - Execute: Until you arrive at the solution, making modifications on the way
 
-# Diagnose/Solve Strategy
+# Diagnose & Solve Strategy
+
+- Diagnose the Situation and Develop the Root Cause
+  - List all potential root causes
+  - Develop a Hypothesis
+  - Determine Which Analysis and Information Required to Test Hypothesis
+  - Analyse & Identify the Root Causes
+- Solve the Problem
+  - Develop a Wide Variety of Solutions to Solve the Problem
+  - Prioritise Actions
+  - Develop an Implementation Plan
+  - Measure Results
 
 ## 1. Diagnose the Situation and Develop the Root Cause
 
@@ -74,24 +85,75 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
 - Who will be actioning the tasks?
 - What do the timeframes look like?
 
-
 ### 2d. Measure Results
 
 - What happened after the tasks were implemented?
 - Has the problem been solved?
 
-### Tools
+## Goal Strategy
 
-#### Logic Tree
+- Set a clear goal
+- Determine the gap between the goal and the current situation
+- Form a hypothesis about how to close the gap and achieve the goal
+  - List as many ideas as you can
+  - Select the best ideas
+- Check the hypothesis
+  - Determine Which Analysis and Information Required to Test Hypothesis
+  - Analyse and develop an action plan
+- Measure results
 
+### Set a Clear Goal
+
+- Determine what your goal is
+- Be as specific as possible
+- Discover the constraints or conditions
+- Do research to help narrow in the goal
+- "I want to buy a $500 used Apple computer within six months without borrowing money from others."
+
+### Determine the Gap Between the Goal and the Current Situation
+
+- Can you project how far you will get without changing the situation?
+- Can you quantify the distance?
+  - "I am $500 short with my current savings pattern"
+- Forming an idea on the gap can help validate solutions
+
+### List as Many Options and Ideas to Close the Gap as Possible
+
+- Come up with a wide variety of ideas
+- Try forming a logic tree to generate options
+
+### Select the Best Ideas as Your Hypothesis
+
+- Which options can you cut out?
+- Highlight which options seem like the most ideal
+
+### Determine Which Analysis and Information Required to Test Hypothesis
+
+- Provides validated options forward
+- For each hypothesis, determine what data and analysis can help dis/prove it
+- Try using a design plan
+- Example:
+  - Issue: How much money can I make from a better paying job
+  - Hypothesis: I can increase my hourly rate from $3 to $9
+  - Analysis Activity: Interview 5 friends, what do they do and how much money to they make, Interview 5 neighbours and ask if they have any jobs and how much they will pay
+  - Information Source: Friends, neighbours
+
+## Tools
+
+### Logic Tree
+
+- Used to discover a problem
 - Helps when trying to identify root causes of a problem
-- Break down problem into categories
+- Can be used to find potential solutions
+- Break down problem into categories or potential solutions
   - Categories are exhaustive
   - Categories don't overlap
   - Can start at any hierarchy
   - "How can I divide this problem"
   - "What can I break this up into"
   - "Why is this problem happening"
+  - "What fits in this category"
+  - "Are there any other ways of solving the problem"
 - Example:
   - How can I increase the amount of pepper that comes from one shake of the bottle
     - Increase the surface area
@@ -110,7 +172,7 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
       - Prioritise actions
       - Develop an implementation plan
 
-#### Yes/No Tree
+### Yes/No Tree
 
 - Used to find a root cause of a problem or decide how to solve a problem
 - Keep asking yes/no questions for each fork in the logic tree
@@ -124,7 +186,7 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
         - No: The battery wasn't in
 
 
-#### Problem Solving Design Plan
+### Problem Solving Design Plan
 
 - Used to validate analysis data points
 - For each data point (eg: question), tabulate the hypothesis, rationale, analysis activity, information source
@@ -135,4 +197,5 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
   - Analysis Activity: Interview 5 people who knew but didn't come
   - Information Source: Survey
 
-# "Big Dream/Small" Goals Strategy
+### Matrix
+
