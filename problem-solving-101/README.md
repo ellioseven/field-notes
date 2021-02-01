@@ -23,6 +23,8 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
   - Why: Identify the root cause of the problem, continously break the problem down
   - How: Develop an effective plan
   - Execute: Until you arrive at the solution, making modifications on the way
+- "Spend less time worrying about things and more time thinking about actions you can take to get closer to your goals, then actually take action"
+- "Ask for advice. You don’t have to figure everything out on your own. Look for information to help you make the best decision in the given time."
 
 # Diagnose & Solve Strategy
 
@@ -138,6 +140,19 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
   - Analysis Activity: Interview 5 friends, what do they do and how much money to they make, Interview 5 neighbours and ask if they have any jobs and how much they will pay
   - Information Source: Friends, neighbours
 
+### Pros/Cons Strategy
+
+- Will help you decide between alternative solutions
+- Process:
+  - What are the pros and cons? Try to build a full list
+  - Weight and order pros and cons, which is the most attractive?
+  - Challenge and assess the pros and cons
+    - Create actions to assess criteria and options
+        - Assess the criteria, are pros and cons weight correctly?
+        - Assess the information, is it accurate? Is it bias?
+    - Can pros be enhanced?
+    - Can cons be eliminated?
+
 ## Tools
 
 ### Logic Tree
@@ -196,6 +211,3 @@ Notes from Ken Watanabe's [Problem Solving 101](https://www.goodreads.com/book/s
   - Rationale: What rock music fan wouldn't come to a free show?
   - Analysis Activity: Interview 5 people who knew but didn't come
   - Information Source: Survey
-
-### Matrix
-
