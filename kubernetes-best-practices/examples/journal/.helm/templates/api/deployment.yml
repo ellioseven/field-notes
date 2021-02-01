@@ -2,41 +2,40 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ template "journal.fullname" . }}-api
-  name: {{ template "journal.fullname" . }}-api
-  namespace: default
+    app: "{{.Chart.Name}}-api"
+  name: "{{.Chart.Name}}-api"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ template "journal.fullname" . }}-api
+      app: "{{.Chart.Name}}-api"
   template:
     metadata:
       labels:
-        app: {{ template "journal.fullname" . }}-api
+        app: "{{.Chart.Name}}-api"
     spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       containers:
-        - image: "gcr.io/aqueous-timer-291305/journal-api:{{ .Chart.AppVersion }}"
+        - image: {{.Values.api.image}}
           command:
             - yarn
             - start
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: API_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: {{ template "journal.fullname" . }}-api-config
+                  name: "{{.Chart.Name}}-api-config"
                   key: apiPort
             - name: REDIS_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: {{ template "journal.fullname" . }}-api-config
+                  name: "{{.Chart.Name}}-api-config"
                   key: redisHost
           ports:
             - containerPort: 4000
-          name: {{ template "journal.fullname" . }}-api
+          name: "{{.Chart.Name}}-api"
           # Setting Request equal to Limit will lead to the most predictable
           # behavior of your application.
           resources:

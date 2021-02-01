@@ -2,42 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ template "journal.fullname" . }}-frontend
-  name: {{ template "journal.fullname" . }}-frontend
-  namespace: default
+    app: "{{.Chart.Name}}-frontend"
+  name: "{{.Chart.Name}}-frontend"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ template "journal.fullname" . }}-frontend
+      app: "{{.Chart.Name}}-frontend"
   template:
     metadata:
       labels:
-        app: {{ template "journal.fullname" . }}-frontend
+        app: "{{.Chart.Name}}-frontend"
     spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       containers:
-        - name: {{ template "journal.fullname" . }}-frontend
-          image: "gcr.io/aqueous-timer-291305/journal-frontend:{{ .Chart.AppVersion }}"
+        - name: "{{.Chart.Name}}-frontend"
+          image: {{.Values.frontend.image}}
           imagePullPolicy: IfNotPresent
-          stdin: true
-          tty: true
-          command:
-            - yarn
-            - start
           env:
             - name: REACT_APP_API_ENDPOINT
               valueFrom:
                 configMapKeyRef:
-                  name: {{ template "journal.fullname" . }}-frontend-config
+                  name: "{{.Chart.Name}}-frontend-config"
                   key: apiEndpoint
           ports:
             - containerPort: {{ .Values.frontend.port }}
-          resources:
-            requests:
-              cpu: "0.25"
-              memory: "0.2G"
-            limits:
-              cpu: "0.25"
-              memory: "0.2G"

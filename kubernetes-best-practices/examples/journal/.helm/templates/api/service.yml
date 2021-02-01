@@ -2,14 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: {{ template "journal.fullname" . }}-api
-  name: {{ template "journal.fullname" . }}-api
-  namespace: default
+    app: "{{.Chart.Name}}-api"
+  name: "{{.Chart.Name}}-api"
 spec:
   ports:
-    - port: 4000
+    - port: {{.Values.api.port}}
       protocol: TCP
-      targetPort: 4000
+      targetPort: {{.Values.api.port}}
   selector:
-    app: {{ template "journal.fullname" . }}-api
+    app: "{{.Chart.Name}}-api"
   type: NodePort

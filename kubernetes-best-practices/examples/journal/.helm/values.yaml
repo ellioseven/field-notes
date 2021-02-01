@@ -1,7 +1,9 @@
+gcloud_project: general-270806
 api:
   port: 4000
   endpoint: http://api.journal.example
 redis:
+  image: redis:5-alpine
   host: redis
   port: 6379
 frontend:

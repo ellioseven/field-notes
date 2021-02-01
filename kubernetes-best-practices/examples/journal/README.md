@@ -2,7 +2,7 @@
 
 - kubectl
 - gcloud
-- helm
+- skaffold
 - GCP Billing Account
 
 ## Getting a Billing Account ID
@@ -45,36 +45,8 @@ gcloud container clusters get-credentials <cluster-name>
 # Destroy Kubernetes cluster.
 ./scripts/destroy.sh <cluster-name>
 
-# Deploy services.
-# NOTE: Ensure builds have been submitted and that versions match `appVersion`
-# in .helm/values.yaml
-cd .helm
-helm install -f values.yaml . --generate-name
-
-# List deployed applications.
-helm list
-
-# Uninstall deployed application.
-helm uninstall <release-name>
-```
-
-# Usage
-
-## Frontend
-
-```sh
-# https://cloud.google.com/cloud-build/docs/building/build-containers
-gcloud builds submit ./services/frontend \
-  --tag gcr.io/<project>/<image>
-```
-
-## API
-
-```sh
-# Build image.
-# https://cloud.google.com/cloud-build/docs/building/build-containers
-gcloud builds submit ./api \
-  --tag gcr.io/<project>/<image>
+# Deploy
+skaffold run
 ```
 
 ## Resources

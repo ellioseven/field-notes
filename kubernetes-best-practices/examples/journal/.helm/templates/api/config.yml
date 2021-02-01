@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "journal.fullname" . }}-api-config
+  name: "{{.Chart.Name}}-api-config"
 data:
-  apiPort: "{{ .Values.api.port }}"
-  redisHost: "{{ template "journal.fullname" . }}-redis"
+  apiPort: "{{.Values.api.port}}"
+  redisHost: "journal-redis"
