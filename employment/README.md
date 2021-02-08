@@ -177,7 +177,7 @@
 
 ### Narrative
 
-Collaborative software engineer, I explore and apply fullstack technology to solve difficult problems
+Collaborative software engineer, I explore and apply fullstack technology to turn complex problems into high quality and maintainable solutions
 
 ### General
 
