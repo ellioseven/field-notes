@@ -231,3 +231,9 @@ Collaborative software engineer, I explore and apply fullstack technology to sol
   - Make the weakness your strength
 - Develop and __practice__ good questions that support your narrative
   - "One of the things that interested me about Acme is the potential for growth, at my last company people tended to stay in the same position for years, I'm looking for opportunity to learn and for promotion. Can you tell me how Acme trains and develops it's employees"
+
+## Questions
+
+- What's your testing policy?
+- What's your process for managing technical debt?
+- What opportunity is there for growth?
