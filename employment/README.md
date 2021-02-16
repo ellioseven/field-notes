@@ -17,6 +17,12 @@
 - I want to always be learning
 - I want to have fun and be inspired
 
+## Career Wants
+
+- Opportunity to grow management skills
+- Opportunity to grow system design and architecture skills
+- Opportunity to explore and work with new technology
+
 ## Career
 
 - Work as a contractor as I earn my degree
@@ -159,6 +165,8 @@
 - Translate requirements into deliverable software
 - Explore collaborative environments with team members (mentoring, feedback, design analysis, code reviews, etc.)
 - Can approach challenges from multiple perspectives
+- Initiative through projects you've started (start-ups)
+- Friendly, easing going (start-ups)
 
 ### Technical Qualities:
 
@@ -177,7 +185,7 @@
 
 ### Narrative
 
-Collaborative software engineer, I explore and apply fullstack technology to turn complex problems into high quality and maintainable solutions
+Software guy, that has deep technical knowledge and a knack for exploring and solving problems.
 
 ### General
 
@@ -206,6 +214,7 @@ Collaborative software engineer, I explore and apply fullstack technology to tur
   - Personal projects
   - Contributions to open source
 - Be unique, get creative
+- Show 2-4 projects that you've built
 
 ### Cover Letter
 
@@ -222,18 +231,29 @@ Collaborative software engineer, I explore and apply fullstack technology to tur
 - Try to find out what the interview process will look like
 - Develop and __practice__ answers to common interview questions
   - What is a problem that you faced and how did you solve it?
+  - What was the hardest bug you've faced?
   - How did you resolve a conflict in your team?
   - Why do you want to work here?
   - Tell me about yourself
+    - Should conform to the narrative
+    - See "Behaviora Questions" in "Cracking the Code Interview"
+      - Current role, education, post education, current role details, relevant outside of work, wrap up - why your here"
+    - Mention if you were "headhunted"
+    - Mention awards or success
   - Why are you leaving your current role
   - What is your greatest strength?
-  - What is your greatest weakness?
+  - What is your greatest weakness? (How do you overcome it?)
   - Make the weakness your strength
+- Practice forming responses that follow SAR (Situation, Action Result)
+  - See "Behavioural Questions" in "Cracking the Code Interview"
+  - What does the SAR response say about you, practice to form brighter qualities
 - Develop and __practice__ good questions that support your narrative
   - "One of the things that interested me about Acme is the potential for growth, at my last company people tended to stay in the same position for years, I'm looking for opportunity to learn and for promotion. Can you tell me how Acme trains and develops it's employees"
+- Practice "Behavioural Questions" in "Cracking the Code Interview"
 
 ## Questions
 
 - What's your testing policy?
 - What's your process for managing technical debt?
 - What opportunity is there for growth?
+
