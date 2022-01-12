@@ -1,3 +1,0 @@
----
-title: "Kubernetes Best Practices"
----

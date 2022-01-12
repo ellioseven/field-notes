@@ -1,7 +1,0 @@
-FROM node:12-alpine
-COPY . /srv
-WORKDIR /srv
-ENV PATH /srv/node_modules/.bin:$PATH
-RUN yarn install
-EXPOSE 4000
-USER root

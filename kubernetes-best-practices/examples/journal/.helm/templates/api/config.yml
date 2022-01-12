@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: "{{.Chart.Name}}-api-config"
-data:
-  apiPort: "{{.Values.api.port}}"
-  redisHost: "journal-redis"
